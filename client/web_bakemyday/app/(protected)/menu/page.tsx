@@ -363,8 +363,7 @@ const handleAddToCart = async (
     strokeWidth={2.5}
   />
 </button>
-
-                <div className="h-full flex items-center justify-center">
+ <div className="h-full flex items-center justify-center">
 
                   <img
                     src={`http://localhost:5000${item.image}`}
@@ -375,12 +374,10 @@ const handleAddToCart = async (
                       object-contain
                     "
                   />
-
                 </div>
 
               </div>
-
-              <div className="p-4">
+        <div className="p-4">
 
                 <div className="flex justify-between items-start gap-2 min-h-[60px]">
 
