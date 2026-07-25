@@ -70,7 +70,6 @@ export default function OrderDetailsPage() {
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {/* Left Configuration Specifications Column */}
               <div className="space-y-6">
                 <div>
                   <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1">Flavor</p>
@@ -113,7 +112,7 @@ export default function OrderDetailsPage() {
                 </div>
               </div>
 
-              {/* Right Media Preview & Summary Parameters Column */}
+            
               <div className="space-y-6">
                 <div>
                   <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Inspiration Image</p>
@@ -133,7 +132,7 @@ export default function OrderDetailsPage() {
                   )}
                 </div>
 
-                {/* Info Metadata Block */}
+            
                 <div className="pt-4 border-t border-gray-100 space-y-3.5 text-sm text-[#3A291D]">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-500 font-medium">Delivery Date</span>
@@ -169,8 +168,6 @@ export default function OrderDetailsPage() {
                       {order.status}
                     </span>
                   </div>
-
-                  {/* Total pricing container */}
                   <div className="flex justify-between items-center border-t border-gray-200 pt-4 mt-2">
                     <span className="text-base font-serif font-bold text-[#2C1E14]">Grand Total</span>
                     <span className="text-2xl font-black text-[#2C1E14]">
