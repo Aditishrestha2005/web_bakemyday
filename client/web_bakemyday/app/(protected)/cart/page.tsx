@@ -177,7 +177,8 @@ const selectedTotal =
     0
   ) || 0;
 
-const handleSelectAll = () => {
+
+  const handleSelectAll = () => {
 
   if (
     selectedItems.length ===
@@ -248,6 +249,7 @@ const handleSelectAll = () => {
 
           <div className="flex gap-5 items-center">
 
+
 <input
   type="checkbox"
   checked={selectedItems.includes(
@@ -289,7 +291,7 @@ const handleSelectAll = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-
+                  
   <button
     onClick={() =>
       handleDelete(item.menuId._id)
@@ -318,6 +320,7 @@ const handleSelectAll = () => {
   "
 >
   -
+
 </button>
                       <span className="text-[#3A291D] font-medium">
                         {item.quantity}
@@ -377,6 +380,7 @@ const handleSelectAll = () => {
                 </div>
 
                 <hr />
+
 
                 <div className="flex justify-between font-bold text-xl text-[#3A291D]">
                   <span>Total</span>
