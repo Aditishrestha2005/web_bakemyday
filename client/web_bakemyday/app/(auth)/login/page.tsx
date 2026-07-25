@@ -9,7 +9,7 @@ export default function LoginPage() {
   const router = useRouter();
 
   const [loading, setLoading] = useState(false);
-
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -28,6 +28,7 @@ export default function LoginPage() {
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
+    setError("");
 
     try {
       setLoading(true);
@@ -49,23 +50,23 @@ export default function LoginPage() {
       if (response.ok) {
         alert("passed");
 
-        // Save token
+        
         localStorage.setItem("token", data.token);
 
-        // Save user data
+        
         localStorage.setItem(
           "user",
           JSON.stringify(data.data)
         );
 
-        // Redirect
+        
         router.push("/menu");
       } else {
-        alert(data.message || "Login Failed");
+       setError(data.message || "Invalid email or password.");
       }
     } catch (error) {
       console.error(error);
-      alert("Could not connect to backend");
+    setError("Unable to connect to the server. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -133,6 +134,11 @@ export default function LoginPage() {
                 required
               />
             </div>
+            {error && (
+  <p className="text-red-600 text-sm font-medium -mt-3">
+    {error}
+  </p>
+)}
 
             <button
               type="submit"

@@ -248,7 +248,7 @@ export default function OrderPage() {
                       disabled={isPlacing}
                       value={formData.deliveryLocation}
                       onChange={(e) => setFormData({ ...formData, deliveryLocation: e.target.value })}
-                      placeholder="Type your continuous street name, house layout, building number, and landmark details..."
+                      placeholder="Type your address."
                       className="w-full border border-gray-300 p-3.5 rounded-md bg-white text-[#3A291D] font-medium focus:outline-none focus:border-[#3A291D] placeholder-gray-400 shadow-sm disabled:bg-gray-100 disabled:text-gray-400"
                       rows={4}
                     />

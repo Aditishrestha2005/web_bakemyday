@@ -7,8 +7,11 @@ import { useRouter } from "next/navigation";
 import Link from "next/link"; // Imported Link for clean internal page routing
 
 export default function OrderHistoryPage() {
-  const [orders, setOrders] = useState<any[]>([]);
-  const router = useRouter();
+ const [orders, setOrders] = useState<any[]>([]);
+const [showCancelModal, setShowCancelModal] = useState(false);
+const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
+
+const router = useRouter();
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -58,32 +61,40 @@ export default function OrderHistoryPage() {
     router.push("/order?type=menu");
   };
 
-  const handleCancelOrder = async (orderId: string) => {
-    const confirmCancel = confirm("Are you sure you want to cancel this order?");
-    if (!confirmCancel) return;
+ const handleCancelOrder = async () => {
+  if (!selectedOrderId) return;
 
-    try {
-      const response = await fetch(
-        `http://localhost:5000/api/order/cancel/${orderId}`,
-        { method: "PUT" }
-      );
-      const data = await response.json();
-
-      if (response.ok) {
-        setOrders((prev) =>
-          prev.map((order) =>
-            order._id === orderId ? { ...order, status: "cancelled" } : order
-          )
-        );
-        alert("Order cancelled successfully");
-      } else {
-        alert(data.message);
+  try {
+    const response = await fetch(
+      `http://localhost:5000/api/order/cancel/${selectedOrderId}`,
+      {
+        method: "PUT",
       }
-    } catch (error) {
-      console.error(error);
-      alert("Something went wrong");
+    );
+
+    const data = await response.json();
+
+    if (response.ok) {
+      setOrders((prev) =>
+        prev.map((order) =>
+          order._id === selectedOrderId
+            ? { ...order, status: "cancelled" }
+            : order
+        )
+      );
+
+      setShowCancelModal(false);
+      setSelectedOrderId(null);
+
+      alert("Order cancelled successfully");
+    } else {
+      alert(data.message);
     }
-  };
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong");
+  }
+};
 
   return (
     <div className="min-h-screen bg-[#F8F5F1]">
@@ -184,7 +195,10 @@ export default function OrderHistoryPage() {
 
                         {order.status !== "cancelled" && (
                           <button
-                            onClick={() => handleCancelOrder(order._id)}
+                         onClick={() => {
+  setSelectedOrderId(order._id);
+  setShowCancelModal(true);
+}}   
                             className="text-red-600 text-sm hover:underline"
                           >
                             Cancel Order
@@ -199,6 +213,47 @@ export default function OrderHistoryPage() {
           ))
         )}
       </div>
+      {showCancelModal && (
+  <div 
+    className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+    onClick={() => {
+      setShowCancelModal(false);
+      setSelectedOrderId(null);
+    }}
+  >
+    <div 
+      className="bg-white rounded-xl p-6 w-[400px] max-w-[90vw] shadow-xl"
+      onClick={(e) => e.stopPropagation()} // Prevents clicks inside the modal from closing it
+    >
+      <h2 className="text-xl font-bold text-[#3A291D] mb-3">
+        Cancel Order
+      </h2>
+
+      <p className="text-gray-600 mb-6">
+        Are you sure you want to cancel this order?
+      </p>
+
+      <div className="flex justify-end gap-3">
+        <button
+          onClick={() => {
+            setShowCancelModal(false);
+            setSelectedOrderId(null);
+          }}
+          className="px-4 py-2 border rounded-lg hover:bg-gray-100 text-gray-700 font-medium transition-colors"
+        >
+          No
+        </button>
+
+        <button
+          onClick={handleCancelOrder}
+          className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 font-medium transition-colors"
+        >
+          Yes, Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+)}
 
       <Footer />
     </div>
