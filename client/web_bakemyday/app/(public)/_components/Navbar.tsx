@@ -15,11 +15,11 @@ export default function Navbar() {
     if (storedUser) {
       setIsLoggedIn(true);
       const user = JSON.parse(storedUser);
-      // Handles typical field keys like profilePicture or image
+     
       const userImg = user.profilePicture || user.image; 
       
       if (userImg) {
-        // Appends backend base url if the path is relative
+       
         if (userImg.startsWith("/")) {
           setProfileImage(`http://localhost:5000${userImg}`);
         } else {
@@ -32,8 +32,6 @@ export default function Navbar() {
   return (
     <nav className="bg-[#3A291D] text-white">
       <div className="max-w-[1440px] mx-auto px-8 py-6 flex items-center justify-between">
-
-        {/* Logo */}
         <Link
           href="/home"
           className="flex items-center gap-3"
@@ -50,7 +48,6 @@ export default function Navbar() {
           </h1>
         </Link>
 
-        {/* Navigation Links */}
         <ul className="flex items-center gap-12 text-lg">
 
           <li>
@@ -91,7 +88,6 @@ export default function Navbar() {
 
         </ul>
 
-        {/* Right Side */}
         {isLoggedIn ? (
           <Link href="/profile" className="flex items-center">
             {profileImage ? (
