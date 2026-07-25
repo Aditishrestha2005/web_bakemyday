@@ -11,7 +11,7 @@ export default function OrderSuccessPage() {
 
       <div className="min-h-screen bg-[#F8F5F1] flex flex-col items-center justify-center p-6 text-center">
         <div className="bg-white p-10 rounded-xl shadow-sm border border-gray-200 max-w-md w-full space-y-6">
-          {/* Celebration Animation */}
+        
           <div className="text-6xl animate-bounce">🎉</div>
 
           <div className="space-y-2">
@@ -25,7 +25,6 @@ export default function OrderSuccessPage() {
 
           <hr className="border-gray-100" />
 
-          {/* Action Button */}
           <div>
             <Link
               href="/menu"

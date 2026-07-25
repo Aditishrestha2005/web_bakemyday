@@ -193,7 +193,6 @@ export default function OrderPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start w-full">
             
-            {/* Input fields */}
             <div className="lg:col-span-2 space-y-6 w-full">
               <div className="bg-white rounded-md border border-gray-200 p-8 shadow-sm space-y-6">
                 <h2 className="text-2xl font-serif font-bold text-[#3A291D] border-b border-gray-100 pb-3">
@@ -256,8 +255,6 @@ export default function OrderPage() {
                 </div>
               </div>
             </div>
-
-            {/* Sticky summary layout aggregate */}
             <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col justify-between w-full">
               <div>
                 <h4 className="font-bold text-xl text-[#3A291D] mb-4 font-serif border-b border-gray-100 pb-3">
@@ -318,7 +315,7 @@ export default function OrderPage() {
                 <span><strong>Payment Method:</strong> Cash On Delivery</span>
               </div>
 
-              {/* Connected Button Hook */}
+        
               <div className="mt-6">
                 <button
                   onClick={handlePlaceOrder}

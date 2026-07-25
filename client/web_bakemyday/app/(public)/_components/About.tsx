@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-[1440px] mx-auto px-3">
         <div className="grid grid-cols-2 gap-6 items-center">
 
-          {/* Left Image */}
+          
           <div>
             <Image
               src="/about-cake.png"
