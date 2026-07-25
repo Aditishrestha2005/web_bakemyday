@@ -132,7 +132,6 @@ export default function OrderDetailsPage() {
                   )}
                 </div>
 
-            
                 <div className="pt-4 border-t border-gray-100 space-y-3.5 text-sm text-[#3A291D]">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-500 font-medium">Delivery Date</span>
