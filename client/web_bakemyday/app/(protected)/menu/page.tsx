@@ -215,12 +215,11 @@ const handleAddToCart = async (
 
       <div className="min-h-screen bg-[#F8F5F1]">
 
-        {/* Title */}
         <h1 className="text-center text-6xl font-bold text-[#3A291D] pt-12">
           Our Menu
         </h1>
 
-        {/* Search + Buttons */}
+    
         <div className="max-w-[1400px] mx-auto mt-10 px-6">
           <div className="relative flex justify-center">
 
@@ -284,7 +283,7 @@ const handleAddToCart = async (
           </div>
         </div>
 
-        {/* Categories */}
+     
         <div className="flex justify-center flex-wrap gap-3 mt-8 mb-10">
 
           {categories.map((category) => (
@@ -310,7 +309,7 @@ const handleAddToCart = async (
 
         </div>
 
-        {/* Products */}
+       
         <div
           className="
             max-w-[1400px]
@@ -338,7 +337,6 @@ const handleAddToCart = async (
               "
             >
 
-              {/* Image */}
              <div className="relative h-36 bg-white">
 
 <button
@@ -382,7 +380,6 @@ const handleAddToCart = async (
 
               </div>
 
-              {/* Content */}
               <div className="p-4">
 
                 <div className="flex justify-between items-start gap-2 min-h-[60px]">
