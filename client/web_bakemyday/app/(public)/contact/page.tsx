@@ -10,7 +10,6 @@ export default function ContactPage() {
       <section className="bg-[#FAF8F5] py-12 md:py-20 text-[#3A291D]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
-          {/* Heading Section */}
           <div className="text-center mb-12 md:mb-20">
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
               We'd Love to Hear From You
@@ -20,11 +19,9 @@ export default function ContactPage() {
               and our team will get back to you as soon as possible.
             </p>
           </div>
-
-          {/* Main Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-            {/* LEFT SIDE: Contact Form & Map */}
+           
             <div className="flex flex-col gap-10">
               <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-[#EADBCE]">
                 <h2 className="font-serif text-3xl font-bold mb-8">
@@ -80,7 +77,6 @@ export default function ContactPage() {
                 </form>
               </div>
 
-              {/* Map Container */}
               <div className="overflow-hidden rounded-2xl shadow-sm border border-[#EADBCE]">
                 <Image
                   src="/map.png"
@@ -92,7 +88,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* RIGHT SIDE: Banner Image & Info */}
             <div className="flex flex-col gap-10">
               <div className="overflow-hidden rounded-2xl shadow-sm border border-[#EADBCE]">
                 <Image

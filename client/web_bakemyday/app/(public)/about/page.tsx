@@ -7,12 +7,10 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-      {/* About Section */}
       <section className="bg-[#FFFFFF] py-6">
         <div className="max-w-[1440px] mx-auto px-4">
           <div className="grid grid-cols-2 gap-6">
 
-            {/* Left Image */}
             <div>
               <Image
                 src="/about-banner.png"
@@ -22,8 +20,6 @@ export default function AboutPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-
-            {/* Right Content */}
             <div>
               <h1 className="font-serif text-[64px] font-bold text-[#3A291D] mb-4">
                 About Us
@@ -52,8 +48,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
       <section className="bg-[#FFFFFF] py-10">
         <div className="max-w-[1440px] mx-auto px-8">
           <div className="grid grid-cols-2 gap-10 items-center">
