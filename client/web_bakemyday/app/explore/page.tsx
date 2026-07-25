@@ -59,7 +59,8 @@ export default function ExplorePage() {
       );
     }
 
-    if (searchTerm) {
+  
+      if (searchTerm) {
       filtered = filtered.filter(
         (item) =>
           item.name
@@ -107,8 +108,7 @@ export default function ExplorePage() {
         <h1 className="text-center text-6xl font-bold text-[#3A291D] pt-12">
           Explore Our Menu
         </h1>
-
-      
+    
         <div className="flex justify-center mt-10 px-6">
           <input
             type="text"
@@ -129,9 +129,7 @@ export default function ExplorePage() {
             "
           />
         </div>
-
-      
-        <div className="flex justify-center flex-wrap gap-3 mt-8 mb-10">
+         <div className="flex justify-center flex-wrap gap-3 mt-8 mb-10">
 
           {categories.map((category) => (
             <button
@@ -186,7 +184,6 @@ export default function ExplorePage() {
               "
             >
 
-             
               <div className="h-44 bg-white flex items-center justify-center">
 
                 <img
