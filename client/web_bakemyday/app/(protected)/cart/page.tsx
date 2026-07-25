@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 
-// CHANGE THESE PATHS IF YOUR COMPONENTS ARE ELSEWHERE
+
 import Navbar from "./../../(public)/_components/Navbar";
 import Footer from "./../../(public)/_components/Footer";
 import { useRouter } from "next/navigation";
@@ -261,7 +261,6 @@ const handleSelectAll = () => {
   }
   className="w-5 h-5"
 />
-
                       <img
                         src={`http://localhost:5000${item.menuId.image}`}
                         alt={item.menuId.name}
@@ -321,7 +320,6 @@ const handleSelectAll = () => {
 >
   -
 </button>
-
                       <span className="text-[#3A291D] font-medium">
                         {item.quantity}
                       </span>
@@ -351,7 +349,6 @@ const handleSelectAll = () => {
 
             </div>
 
-            {/* Order Summary */}
             <div
               className="
                 bg-white
