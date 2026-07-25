@@ -72,7 +72,7 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen grid grid-cols-2">
 
-      {/* Left Side */}
+  
       <div className="relative">
         <Image
           src="/register-cake.png"
@@ -84,7 +84,6 @@ export default function RegisterPage() {
         />
       </div>
 
-      {/* Right Side */}
       <div className="bg-[#F4EFEF] flex items-center justify-center">
 
         <div className="w-full max-w-[420px]">
@@ -98,7 +97,6 @@ export default function RegisterPage() {
             className="space-y-5"
           >
 
-            {/* Full Name */}
             <div>
               <label className="block text-[#3A291D] font-medium mb-1">
                 Full Name
@@ -115,7 +113,6 @@ export default function RegisterPage() {
               />
             </div>
 
-            {/* Username */}
             <div>
               <label className="block text-[#3A291D] font-medium mb-1">
                 User Name
@@ -131,8 +128,6 @@ export default function RegisterPage() {
                 required
               />
             </div>
-
-            {/* Email */}
             <div>
               <label className="block text-[#3A291D] font-medium mb-1">
                 Email
@@ -149,7 +144,7 @@ export default function RegisterPage() {
               />
             </div>
 
-            {/* Phone */}
+           
             <div>
               <label className="block text-[#3A291D] font-medium mb-1">
                 Phone Number
@@ -166,7 +161,6 @@ export default function RegisterPage() {
               />
             </div>
 
-            {/* Password */}
             <div>
               <label className="block text-[#3A291D] font-medium mb-1">
                 Password
@@ -183,7 +177,6 @@ export default function RegisterPage() {
               />
             </div>
 
-            {/* Confirm Password */}
             <div>
               <label className="block text-[#3A291D] font-medium mb-1">
                 Confirm Password

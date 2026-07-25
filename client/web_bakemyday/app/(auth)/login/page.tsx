@@ -75,7 +75,6 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen grid grid-cols-2">
 
-      {/* Left Side */}
       <div className="relative">
         <Image
           src="/register-cake.png"
@@ -87,7 +86,6 @@ export default function LoginPage() {
         />
       </div>
 
-      {/* Right Side */}
       <div className="bg-[#F4EFEF] flex items-center justify-center">
 
         <div className="w-full max-w-[420px]">
@@ -101,7 +99,7 @@ export default function LoginPage() {
             className="space-y-6"
           >
 
-            {/* Email */}
+           
             <div>
               <label className="block text-[#3A291D] font-medium mb-2">
                 Email
@@ -118,7 +116,6 @@ export default function LoginPage() {
               />
             </div>
 
-            {/* Password */}
             <div>
               <label className="block text-[#3A291D] font-medium mb-2">
                 Password

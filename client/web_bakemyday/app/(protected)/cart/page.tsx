@@ -214,7 +214,6 @@ const handleSelectAll = () => {
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-            {/* Cart Items */}
             <div className="lg:col-span-2 bg-white border rounded-lg p-4 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
 
@@ -340,7 +339,6 @@ const handleSelectAll = () => {
 >
   +
 </button>
-
                     </div>
 
                   </div>
