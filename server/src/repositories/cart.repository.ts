@@ -2,7 +2,8 @@ import { CartModel, ICart } from "../models/cart.model";
 
 export class CartRepository {
 
-  async getCartByUserId(
+ 
+   async getCartByUserId(
     userId: string
   ): Promise<ICart | null> {
 
