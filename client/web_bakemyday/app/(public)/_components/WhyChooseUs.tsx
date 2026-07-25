@@ -37,29 +37,24 @@ export default function WhyChooseUs() {
   return (
     <section className="bg-white py-10">
       <div className="max-w-[1440px] mx-auto px-6">
-        {/* Heading */}
         <h2 className="text-center font-serif text-[64px] font-bold text-[#3A291D] mb-10">
           Why Choose Us
         </h2>
 
-        {/* Cards */}
         <div className="grid grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
               className="bg-[#B6AF8C] rounded-[8px] p-5 min-h-[190px]"
             >
-              {/* Icon */}
               <div className="text-[#3A291D] text-[28px] mb-3">
                 {feature.icon}
               </div>
-
-              {/* Title */}
               <h3 className="text-[#3A291D] font-semibold text-[14px] mb-3">
                 {feature.title}
               </h3>
 
-              {/* Description */}
+              
               <p className="text-[#3A291D] text-[13px] leading-6">
                 {feature.description}
               </p>
