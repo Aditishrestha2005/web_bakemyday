@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../../(public)/_components/Navbar";
 import Footer from "../../(public)/_components/Footer";
 import { useRouter } from "next/navigation";
-import Link from "next/link"; // Imported Link for clean internal page routing
+import Link from "next/link"; 
 
 export default function OrderHistoryPage() {
  const [orders, setOrders] = useState<any[]>([]);
@@ -104,8 +104,6 @@ const router = useRouter();
         <h1 className="text-4xl font-bold text-[#3A291D] mb-10">
           Order History
         </h1>
-
-        {/* Dynamic empty state handler block */}
         {orders.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-center bg-white rounded-lg border border-gray-200 p-8 shadow-sm">
             <span className="text-6xl mb-4">📦</span>
@@ -223,7 +221,7 @@ const router = useRouter();
   >
     <div 
       className="bg-white rounded-xl p-6 w-[400px] max-w-[90vw] shadow-xl"
-      onClick={(e) => e.stopPropagation()} // Prevents clicks inside the modal from closing it
+      onClick={(e) => e.stopPropagation()} 
     >
       <h2 className="text-xl font-bold text-[#3A291D] mb-3">
         Cancel Order
