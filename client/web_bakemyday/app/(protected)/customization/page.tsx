@@ -51,8 +51,7 @@ export default function CustomizationPage() {
     "4 Pound": 4000,
   };
 
-  // Logic to determine if a size is eligible for a Tower cake (needs to be 4 or 5 pounds)
-  // In our list, only "4 Pound" meets the >= 4 pounds requirement.
+  
   const isTowerEligible = formData.size === "4 Pound";
 
   const cakePrice = cakePrices[formData.size] || 0;
@@ -212,13 +211,12 @@ const response =
             </p>
           </div>
 
-          {/* Info Banner */}
+      
           <div className="bg-[#EFEBE4] text-sm text-gray-600 px-4 py-3 rounded-md flex items-center gap-2 w-full">
             <span>ⓘ Prices may vary depending on cake size, design, and customization choices.</span>
           </div>
 
-          {/* Cake Flavor Dropdown */}
-          <div className="space-y-2">
+             <div className="space-y-2">
             <label className="block font-serif font-bold text-xl text-[#3A291D]">
               Cake Flavor
             </label>
@@ -239,7 +237,7 @@ const response =
             </div>
           </div>
 
-          {/* Cake Size Dropdown */}
+        
           <div className="space-y-2">
             <label className="block font-serif font-bold text-xl text-[#3A291D]">
               Cake Size <span className="text-sm font-normal text-gray-400 font-sans ml-1">( Per pound Rs 1000 )</span>
@@ -252,7 +250,7 @@ const response =
                   if (value === "0.5 Pound") {
                     setFormData({ ...formData, size: value, shape: "Bento" });
                   } else if (value !== "4 Pound" && formData.shape === "Tower") {
-                    // Reset shape if they select a smaller size while Tower was active
+               
                     setFormData({ ...formData, size: value, shape: "" });
                   } else {
                     setFormData({ ...formData, size: value });
@@ -274,14 +272,14 @@ const response =
             )}
           </div>
 
-          {/* Cake Shape Row */}
+      
           <div className="space-y-3">
             <label className="block font-serif font-bold text-xl text-[#3A291D]">
               Cake Shape
             </label>
             <div className="flex flex-wrap gap-8">
               {["Circle", "Rectangle", "Square", "Heart", "Bento", "Tower"].map((shape) => {
-                // Determine disabled status based on your explicit cake rules
+                
                 const isBentoDisabled = formData.size === "0.5 Pound" && shape !== "Bento";
                 const isTowerDisabled = shape === "Tower" && formData.size !== "" && !isTowerEligible;
                 const isDisabled = isBentoDisabled || isTowerDisabled;
@@ -309,7 +307,7 @@ const response =
             )}
           </div>
 
-          {/* Toppings Checklist */}
+      
           <div className="space-y-3">
             <label className="block font-serif font-bold text-xl text-[#3A291D]">
               Toppings <span className="text-sm font-normal text-gray-400 font-sans ml-1">( Rs 80 each )</span>
@@ -335,7 +333,7 @@ const response =
             </div>
           </div>
 
-          {/* Inspo Image Upload - FIXED: object-contain prevents the image from clipping/zooming */}
+       
           <div className="space-y-2">
             <label className="block font-serif font-bold text-xl text-[#3A291D]">
               Inspo Image
@@ -365,14 +363,13 @@ const response =
             </label>
           </div>
 
-          {/* COMBINED LOWER AREA: MESSAGE, DATE/TIME & SUMMARY DETAILS */}
-          {/* Layout keeps everything structurally sound and visible */}
+      
           <div className="pt-4 flex flex-col lg:flex-row items-start justify-between gap-12 w-full">
             
-            {/* Left aligned column block holding Message & Delivery metrics */}
+          
             <div className="space-y-6 w-full max-w-xl">
               
-              {/* Message Input - Now perfectly preserved inside the flow */}
+             
               <div className="space-y-2 w-full">
                 <label className="block font-serif font-bold text-xl text-[#3A291D]">
                   Message on Cake
@@ -386,7 +383,6 @@ const response =
                 />
               </div>
 
-              {/* Delivery Date/Time input box */}
               <div className="space-y-2 w-full">
                 <label className="block font-serif font-bold text-xl text-[#3A291D]">
                   Date & Time
@@ -400,9 +396,7 @@ const response =
               </div>
 
             </div>
-
-            {/* Constant anchored Summary Box */}
-            <div className="w-full max-w-md bg-white border border-gray-200 rounded-md p-6 shadow-sm font-sans flex flex-col justify-between">
+   <div className="w-full max-w-md bg-white border border-gray-200 rounded-md p-6 shadow-sm font-sans flex flex-col justify-between">
               <div>
                 <h4 className="font-bold text-xl text-[#3A291D] mb-4 font-serif">Summary Details</h4>
                 <div className="space-y-3 text-sm text-gray-600">
@@ -424,8 +418,10 @@ const response =
                   </div>
                 </div>
               </div>
+       
+         
 
-              {/* Confirm Order Button directly inside summary box */}
+              
               <div className="mt-6">
                 <button
 onClick={handleConfirmOrder}
