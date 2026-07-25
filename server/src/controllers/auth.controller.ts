@@ -5,8 +5,6 @@ import {
   LoginUserDTO,
 } from "../dtos/user.dtos";
 
-
-
 const userService = new UserService();
 interface MulterRequest
   extends Request {
