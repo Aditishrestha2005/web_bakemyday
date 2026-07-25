@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import OrderPage from "../(protected)/order/page";
 
-// Mock Next.js navigation
 jest.mock("next/navigation", () => ({
   useRouter: () => ({
     push: jest.fn(),
@@ -14,14 +13,14 @@ jest.mock("next/navigation", () => ({
   }),
 }));
 
-// Mock Navbar
+
 jest.mock("../(public)/_components/Navbar", () => {
   return function Navbar() {
     return <div>Navbar</div>;
   };
 });
 
-// Mock Footer
+
 jest.mock("../(public)/_components/Footer", () => {
   return function Footer() {
     return <div>Footer</div>;

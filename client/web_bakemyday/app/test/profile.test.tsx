@@ -1,21 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import ProfilePage from "../(protected)/profile/page";
 
-// Mock Router
+
 jest.mock("next/navigation", () => ({
   useRouter: () => ({
     push: jest.fn(),
   }),
 }));
 
-// Mock Navbar
+
 jest.mock("../(public)/_components/Navbar", () => {
   return function Navbar() {
     return <div>Navbar</div>;
   };
 });
 
-// Mock Footer
 jest.mock("../(public)/_components/Footer", () => {
   return function Footer() {
     return <div>Footer</div>;

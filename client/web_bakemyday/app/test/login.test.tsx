@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import LoginPage from "../(auth)/login/page";
 
-// Mock Next.js components
+
 jest.mock("next/image", () => (props: any) => {
   return <img {...props} />;
 });

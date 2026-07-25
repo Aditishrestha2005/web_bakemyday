@@ -103,12 +103,12 @@ export default function ExplorePage() {
 
       <div className="min-h-screen bg-[#F8F5F1]">
 
-        {/* Title */}
+  
         <h1 className="text-center text-6xl font-bold text-[#3A291D] pt-12">
           Explore Our Menu
         </h1>
 
-        {/* Search */}
+      
         <div className="flex justify-center mt-10 px-6">
           <input
             type="text"
@@ -130,7 +130,7 @@ export default function ExplorePage() {
           />
         </div>
 
-        {/* Categories */}
+      
         <div className="flex justify-center flex-wrap gap-3 mt-8 mb-10">
 
           {categories.map((category) => (
@@ -159,7 +159,6 @@ export default function ExplorePage() {
 
         </div>
 
-        {/* Products */}
         <div
           className="
             max-w-[1400px]
@@ -187,7 +186,7 @@ export default function ExplorePage() {
               "
             >
 
-              {/* Image */}
+             
               <div className="h-44 bg-white flex items-center justify-center">
 
                 <img
@@ -202,7 +201,6 @@ export default function ExplorePage() {
 
               </div>
 
-              {/* Content */}
               <div className="p-4">
 
                 <h2 className="font-semibold text-[#3A291D] text-lg">

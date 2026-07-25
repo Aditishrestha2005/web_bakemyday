@@ -18,9 +18,6 @@ import { HttpError } from "./errors/http-error";
 
 const app: Application = express();
 
-/**
- * Middlewares
- */
 app.use(express.json());
 
 app.use(
@@ -32,9 +29,7 @@ app.use(
 
 app.use(cookieParser());
 
-/**
- * Static Files
- */
+
 app.use(
   "/uploads",
   express.static(
@@ -42,9 +37,7 @@ app.use(
   )
 );
 
-/**
- * Routes
- */
+
 app.use(
   "/api/auth",
   authRoutes
@@ -69,9 +62,7 @@ app.use(
   orderRoutes
 );
 
-/**
- * Root Route
- */
+
 app.get(
   "/",
   (req: Request, res: Response) => {
@@ -83,9 +74,7 @@ app.get(
   }
 );
 
-/**
- * 404 Handler
- */
+
 app.use(
   (
     req: Request,
@@ -98,9 +87,7 @@ app.use(
   }
 );
 
-/**
- * Global Error Handler
- */
+
 app.use(
   (
     err: Error,

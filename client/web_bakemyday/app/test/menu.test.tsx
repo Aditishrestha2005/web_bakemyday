@@ -1,29 +1,28 @@
 import { render, screen } from "@testing-library/react";
 import MenuPage from "../(protected)/menu/page";
 
-// Mock Next.js router
+
 jest.mock("next/navigation", () => ({
   useRouter: () => ({
     push: jest.fn(),
   }),
 }));
 
-// Mock Navbar
+
 jest.mock("../(public)/_components/Navbar", () => () => (
   <div>Navbar</div>
 ));
 
-// Mock Footer
 jest.mock("../(public)/_components/Footer", () => () => (
   <div>Footer</div>
 ));
 
-// Mock Lucide Icons
+
 jest.mock("lucide-react", () => ({
   ShoppingCart: () => <div>ShoppingCart</div>,
 }));
 
-// Mock Axios
+
 jest.mock("axios", () => ({
   get: jest.fn().mockResolvedValue({
     data: {
