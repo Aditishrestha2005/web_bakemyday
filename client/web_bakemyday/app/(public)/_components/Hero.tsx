@@ -25,7 +25,6 @@ export default function Hero() {
     <section className="bg-[#3A291D] text-white">
       <div className="max-w-[1440px] mx-auto px-8 py-16 flex items-center justify-between">
 
-        {/* Left Side */}
         <div className="max-w-[600px]">
 
           <h1 className="font-serif text-[72px] font-bold leading-[1.15]">
@@ -78,7 +77,6 @@ export default function Hero() {
 
         </div>
 
-        {/* Right Side */}
         <div>
           <Image
             src="/cakeh.png"

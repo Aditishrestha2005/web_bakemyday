@@ -33,7 +33,6 @@ export default function PopularItems() {
               key={index}
               className="bg-[#FFFBF7] rounded-[10px] overflow-hidden shadow-sm hover:shadow-md transition duration-300"
             >
-              {/* Image */}
               <div className="h-[260px] flex items-center justify-center p-4">
                 <Image
                   src={item.image}
@@ -43,8 +42,6 @@ export default function PopularItems() {
                   className="object-contain"
                 />
               </div>
-
-              {/* Product Name */}
               <div className="pb-5">
                 <h3 className="text-center font-serif text-[24px] font-semibold text-[#3A291D]">
                   {item.name}

@@ -8,7 +8,6 @@ export default function Footer() {
 
         <div className="grid grid-cols-3 gap-16">
 
-          {/* Left Section */}
           <div>
             <h2 className="font-serif text-[36px] font-bold mb-8">
               BakeMyDay
@@ -37,7 +36,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Middle Section */}
+    
           <div>
             <h2 className="font-serif text-[36px] font-bold mb-8">
               Quick Links
@@ -52,7 +51,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Right Section */}
+         
           <div className="flex flex-col items-end">
             <Image
               src="/map.png"

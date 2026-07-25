@@ -18,7 +18,7 @@ export default function About() {
             />
           </div>
 
-          {/* Right Content */}
+        
           <div className="h-[420px] flex flex-col justify-start">
             <h2 className="font-serif text-[72px] font-bold text-[#3A291D] leading-none mb-6">
               About Us
