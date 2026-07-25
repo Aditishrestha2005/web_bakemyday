@@ -143,9 +143,7 @@ export default function RegisterPage() {
                 required
               />
             </div>
-
-           
-            <div>
+              <div>
               <label className="block text-[#3A291D] font-medium mb-1">
                 Phone Number
               </label>
@@ -177,6 +175,7 @@ export default function RegisterPage() {
               />
             </div>
 
+            
             <div>
               <label className="block text-[#3A291D] font-medium mb-1">
                 Confirm Password
