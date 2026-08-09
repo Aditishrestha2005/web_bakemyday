@@ -146,7 +146,6 @@ export default function ProfilePage() {
       <Navbar />
 
       <main className="max-w-7xl w-full mx-auto px-6 py-10 flex-grow">
-       =
         <div className="flex justify-end mb-6">
           <button 
             onClick={() => setShowLogoutModal(true)}
@@ -159,10 +158,7 @@ export default function ProfilePage() {
           </button>
         </div>
 
-     
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start mb-16">
-          
-       
           <div className="border border-gray-200 rounded-lg p-8 flex flex-col items-center justify-center relative bg-white shadow-sm min-h-[320px]">
             <div className="relative group">
               <img
@@ -194,7 +190,6 @@ export default function ProfilePage() {
             </h2>
           </div>
 
-       =
           <div className="md:col-span-2 flex flex-col justify-between h-full">
             <div>
               <h3 className="text-2xl font-serif font-bold mb-6 tracking-wide text-[#2C1E14]">
@@ -290,6 +285,7 @@ export default function ProfilePage() {
         </div>
 
         <hr className="border-gray-200 my-10" />
+
         <section>
           <div className="flex justify-between items-baseline mb-6">
             <h3 className="text-2xl font-serif font-bold tracking-wide text-[#2C1E14]">
@@ -355,6 +351,7 @@ export default function ProfilePage() {
       </main>
 
       <Footer />
+
       {showLogoutModal && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-[2px] flex items-center justify-center z-50">
           <div className="bg-white rounded-xl p-7 max-w-[340px] w-full shadow-xl border border-gray-100 mx-4 animate-in fade-in zoom-in-95 duration-150 text-center sm:text-left">
